@@ -2,7 +2,7 @@
   "name": "line-completion",
   "displayName": "Line Completion",
   "description": "Suggest a completion of the line that starts the same",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "rioj7",
   "license": "MIT",
   "engines": { "vscode": "^1.60.0" },
