@@ -1,0 +1,42 @@
+{
+  "name": "line-completion",
+  "displayName": "Line Completion",
+  "description": "Suggest a completion of the line that starts the same",
+  "version": "0.1.0",
+  "publisher": "rioj7",
+  "license": "MIT",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": [ "Other" ],
+  "keywords": ["line","completion"],
+  "galleryBanner": {"color": "#000080", "theme": "dark"},
+  "activationEvents": [ "*" ],
+  "main": "./line-completion",
+  "browser": "./line-completion",
+  "contributes": {
+    "configuration": {
+      "title": "Line Completion",
+      "properties": {
+        "line-completion.documentSelector": {
+          "type": "array",
+          "default": [{ "language": "plaintext", "scheme": "file" }],
+          "scope": "resource",
+          "markdownDescription": "What files use this line completion. An array of [DocumentFilter](https://code.visualstudio.com/api/references/vscode-api#DocumentFilter) objects."
+        },
+        "line-completion.minimalCharacterCount": {
+          "type": "integer",
+          "default": 3,
+          "scope": "resource",
+          "description": "How many characters to type before a completion suggestion is made."
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/rioj7/vscode-line-completion",
+  "bugs": {
+    "url": "https://github.com/rioj7/vscode-line-completion/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rioj7/vscode-line-completion.git"
+  }
+}
