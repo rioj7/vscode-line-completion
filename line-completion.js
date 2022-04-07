@@ -11,7 +11,7 @@ function activate(context) {
     {
       /** @param {vscode.TextDocument} document @param {vscode.Position} position */
       provideCompletionItems(document, position) {
-        const linePrefix = document.lineAt(position).text.trimStart().toLowerCase();
+        const linePrefix = document.lineAt(position).text.substring(0, position.character).trimStart().toLowerCase();
         if (linePrefix.length < minimalCharacterCount) { return undefined; }
         const range = new vscode.Range(position.line, position.character - linePrefix.length, position.line, position.character);
         let result = [];
